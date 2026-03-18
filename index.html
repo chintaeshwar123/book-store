@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Books</title>
+    <meta name="description" content="Discover your next favorite book at Lumina. We offer a curated collection of premium fiction and non-fiction.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-book-open"></i> Lumina
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="icon-btn cart-btn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Lose yourself in a <span>great story</span></h1>
+                <p class="hero-subtitle">Discover our highly curated collection of bestselling novels, rare finds, and literary classics.</p>
+                <div class="hero-actions">
+                    <a href="#featured" class="btn btn-primary">Shop Collection <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#about" class="btn btn-secondary">Our Story</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="book-showcase">
+                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=600" alt="Featured Book" class="showcase-img main-img">
+                    <div class="glass-card new-arrival">
+                        <span class="tag">New Arrival</span>
+                        <h4>The Secret History</h4>
+                        <p>Donna Tartt</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured" class="featured-books">
+            <div class="section-header">
+                <h2>Curated Selections</h2>
+                <p>Handpicked gems for your reading pleasure</p>
+                <div class="category-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="fiction">Fiction</button>
+                    <button class="filter-btn" data-filter="non-fiction">Non-Fiction</button>
+                    <button class="filter-btn" data-filter="sci-fi">Sci-Fi</button>
+                </div>
+            </div>
+            
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be injected via JS -->
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=800" alt="Library">
+                </div>
+                <div class="about-content">
+                    <h2>More than just a bookstore</h2>
+                    <p>At Lumina, we believe in the transformative power of reading. Founded in 2024, our mission is to connect passionate readers with extraordinary stories.</p>
+                    <ul class="features-list">
+                        <li>
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <div>
+                                <h4>Free Worldwide Shipping</h4>
+                                <p>On all orders over $50</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-leaf"></i>
+                            <div>
+                                <h4>Eco-Friendly Packaging</h4>
+                                <p>100% recyclable materials</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-rotate-left"></i>
+                            <div>
+                                <h4>30-Day Returns</h4>
+                                <p>Not satisfied? Send it back</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h2>Your Bag</h2>
+                <button class="close-cart" id="close-cart"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be injected via JS -->
+                <div class="empty-cart-msg">Your bag is empty.</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <span id="cart-total-price">$0.00</span>
+                </div>
+                <button class="btn btn-primary w-100 checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo"><i class="fa-solid fa-book-open"></i> Lumina</a>
+                <p>Bringing stories to life, one page at a time.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Shop</h4>
+                    <a href="#">All Books</a>
+                    <a href="#">Bestsellers</a>
+                    <a href="#">New Releases</a>
+                    <a href="#">Gift Cards</a>
+                </div>
+                <div class="link-group">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Press</a>
+                </div>
+                <div class="link-group">
+                    <h4>Support</h4>
+                    <a href="#">FAQ</a>
+                    <a href="#">Shipping</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lumina Books. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
